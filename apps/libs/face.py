@@ -43,6 +43,7 @@ class FaceTool:
         os.remove(tmp_filename)
         return face_code
 
+<<<<<<< HEAD
     def face_detection(self):
         if type(self.__img) == str:
             stream = requests.get(self.__img).content
@@ -73,3 +74,9 @@ class FaceTool:
 # if __name__ == '__main__':
 #     ft = FaceTool("https://www.yingjoy.cn/logo.png")
 #     print(ft.is_face())
+=======
+
+if __name__ == '__main__':
+    ft = FaceTool("https://www.yingjoy.cn/logo.png")
+    print(ft.is_face())
+>>>>>>> dcab4223f7d47855f642a33018cf9b3b0f2b9d9b
