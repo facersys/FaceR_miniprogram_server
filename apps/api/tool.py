@@ -38,3 +38,34 @@ def upload_face():
     return success(data=qiniu.get_file(filename), message='图像上传成功')
 
 
+@api.route('/face_detection', methods=['POST'])
+def upload_tmp():
+    filename = "tmp-{}.png".format(str(int(time.time())))
+    img_stream = request.files.get('img').read()
+
+    buf = np.asarray(bytearray(img_stream), dtype="uint8")
+    img = cv2.imdecode(buf, cv2.IMREAD_COLOR)
+    result = detector.detect_faces(img)
+
+    print(result)
+
+    bounding_box = result[0]['box']
+    keypoints = result[0]['keypoints']
+
+
+    cv2.rectangle(img,
+                  (bounding_box[0], bounding_box[1]),
+                  (bounding_box[0] + bounding_box[2], bounding_box[1] + bounding_box[3]),
+                  (0, 155, 255),
+                  2)
+    cv2.circle(img, (keypoints['left_eye']), 2, (0, 255, 0), 2)
+    cv2.circle(img, (keypoints['right_eye']), 2, (0, 255, 0), 2)
+    cv2.circle(img, (keypoints['nose']), 2, (0, 255, 0), 2)
+    cv2.circle(img, (keypoints['mouth_left']), 2, (0, 255, 0), 2)
+    cv2.circle(img, (keypoints['mouth_right']), 2, (0, 255, 0), 2)
+
+    cv2.imwrite(filename, img)
+    with open(filename, 'rb') as f:
+        qiniu.upload_file(filename, f.read())
+    os.remove(filename)
+    return filename
