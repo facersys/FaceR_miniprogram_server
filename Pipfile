@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+pymongo = "*"
+pycryptodome = "*"
+requests = "*"
+qiniu = "*"
+dlib = {path = "./wheelhouse/dlib-19.7.0-cp36-cp36m-win_amd64.whl"}
+face-recognition = {path = "./wheelhouse/face_recognition-1.2.3-py2.py3-none-any.whl"}
+cv2 = {path = "./wheelhouse/opencv_python-4.0.0-cp36-cp36m-win_amd64.whl"}
+baidu-aip = "*"
+opencv-python = "*"
+
+[requires]
+python_version = "3.6"
