@@ -2,7 +2,6 @@
 from aip import AipOcr
 
 from apps.libs.mongo import MongoTools
-from apps.libs.mtcnn.mtcnn import MTCNN
 from apps.libs.qiniu import MyQiNiu
 from apps.security import MONGO_DATABASE, QINIU_ACCESS_KEY, \
     QINIU_SECRET_KEY, QINIU_BUCKET_NAME, QINIU_DOMAIN, \

@@ -43,7 +43,33 @@ class FaceTool:
         os.remove(tmp_filename)
         return face_code
 
+    def face_detection(self):
+        if type(self.__img) == str:
+            stream = requests.get(self.__img).content
+        else:
+            stream = self.__img
+        with NamedTemporaryFile('w+b', delete=False) as f:
+            f.write(stream)
+            image = face_recognition.load_image_file(f.name)
+            # 一张图片可能会有多张人脸, 本应用只取第一张
+            face_landmarks_ = face_recognition.face_landmarks(image)
+            tmp_filename = f.name
+        os.remove(tmp_filename)
+        return face_landmarks_
 
-if __name__ == '__main__':
-    ft = FaceTool("https://www.yingjoy.cn/logo.png")
-    print(ft.is_face())
+    def get_face_arr(self):
+        if type(self.__img) == str:
+            stream = requests.get(self.__img).content
+        else:
+            stream = self.__img
+
+        with NamedTemporaryFile('w+b', delete=False) as f:
+            f.write(stream)
+            image = face_recognition.load_image_file(f.name)
+            tmp_filename = f.name
+        os.remove(tmp_filename)
+        return image
+
+# if __name__ == '__main__':
+#     ft = FaceTool("https://www.yingjoy.cn/logo.png")
+#     print(ft.is_face())
