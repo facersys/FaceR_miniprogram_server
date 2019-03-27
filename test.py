@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 
-<<<<<<< HEAD
 import cv2
-import face_recognition
+import numpy as np
+import requests
 
-# Load the jpg file into a numpy array
-image = cv2.imread('2.jpg')
+img_bytes = requests.get('https://facer.yingjoy.cn/static/logo.png').content
 
-# Find all facial features in all the faces in the image
-face_landmarks_list = face_recognition.face_landmarks(image)
+image = cv2.imdecode(np.frombuffer(img_bytes, np.uint8), cv2.IMREAD_COLOR)
 
-print(face_landmarks_list)
-
-
+img_encode = cv2.imencode('.png', image)[1]
+data = np.array(img_encode).tostring()
+print(data)
 # pil_image.show()
-cv2.imshow('', image)
-cv2.waitKey(0)
-=======
-
->>>>>>> dcab4223f7d47855f642a33018cf9b3b0f2b9d9b
+# cv2.imshow('', image)
+# cv2.waitKey(0)

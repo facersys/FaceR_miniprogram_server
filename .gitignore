@@ -5,6 +5,7 @@ security.py
 *.whl
 node_modules/*
 test/*
+*.png
 
 # Copied from https://github.com/Squared-Software/PyCharm-Django-Git-Ignore
 # Byte-compiled / optimized / DLL files

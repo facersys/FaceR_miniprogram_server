@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
-<<<<<<< HEAD
 import cv2
 import numpy as np
 
-=======
->>>>>>> dcab4223f7d47855f642a33018cf9b3b0f2b9d9b
 from apps.libs import aipOcr
 
 
@@ -13,7 +10,6 @@ def img2txt(stream):
     """图片转文字"""
     result = aipOcr.basicAccurate(stream).get("words_result")
     return result[0].get('words') if result else ""
-<<<<<<< HEAD
 
 
 def get_polylines_data(arr):
@@ -43,5 +39,3 @@ def draw_face(image, face_landmarks_list):
         cv2.polylines(image, get_polylines_data(face_landmarks['nose_tip']), False, (255, 255, 255, 30))
 
     return image
-=======
->>>>>>> dcab4223f7d47855f642a33018cf9b3b0f2b9d9b
