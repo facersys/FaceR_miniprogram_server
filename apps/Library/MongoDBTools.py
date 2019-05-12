@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 
 import pymongo
-from apps.security import MONGO_URI
+
+from apps.Config import getConfig
 
 __author__ = "YingJoy"
 
 
 class MongoTools:
 
-    def __init__(self, db):
+    def __init__(self, db, uri):
         """
         初始化
         """
-        self.mongo_client = pymongo.MongoClient(MONGO_URI)
+        self.mongo_client = pymongo.MongoClient(uri)
         self.db = self.mongo_client[db]
 
     def insert(self, collection, document, indexs=None):
@@ -83,3 +84,17 @@ class MongoTools:
         :return:
         """
         return self.db[collection].delete_one(item)
+
+
+if __name__ == '__main__':
+    mongo = MongoTools(
+        getConfig('mongodb', 'db'),
+        "mongodb://%s:%s@%s:%s" % (
+            getConfig('mongodb', 'user'),
+            getConfig('mongodb', 'pwd'),
+            getConfig('mongodb', 'host'),
+            getConfig('mongodb', 'port')
+        )
+    )
+
+    print(mongo.insert('asd', {'1': 1}))

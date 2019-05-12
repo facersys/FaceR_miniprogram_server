@@ -7,8 +7,8 @@ import requests
 import face_recognition
 from tempfile import NamedTemporaryFile
 
-from apps.libs import mongo
-from apps.security import MONGO_USER_COLLECTION
+from apps.Config import getConfig
+from apps.Library import mongo
 
 
 class FaceTool:
@@ -111,7 +111,7 @@ class FaceTool:
         return return_result, image
 
     def find_face_owner(self, face_code):
-        results = list(mongo.find(MONGO_USER_COLLECTION, {}))
+        results = list(mongo.find(getConfig('mongodb','user_collection'), {}))
         know_face_codes = [result['face'] for result in results]
         face_compare_result = face_recognition.compare_faces(know_face_codes, face_code)
         # 这里可能会出现非常相似的人脸(双胞胎) 不考虑

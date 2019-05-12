@@ -3,7 +3,7 @@
 import cv2
 import numpy as np
 
-from apps.libs import aipOcr
+from apps.Library import aipOcr
 
 
 def img2txt(stream):

@@ -2,8 +2,6 @@
 
 from qiniu import Auth, put_data
 
-from apps.security import QINIU_DOMAIN
-
 
 class MyQiNiu:
     """

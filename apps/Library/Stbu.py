@@ -5,10 +5,9 @@ import json
 import time
 import requests
 
-from apps.libs import qiniu
-from apps.libs.face import FaceTool
-from apps.libs.image_tool import img2txt
-from apps.models.user import UserModel
+from apps.Library import qiniu, log
+from apps.Library.FaceTools import FaceTool
+from apps.Library.ImageTools import img2txt
 
 
 class Stbu:
@@ -42,7 +41,7 @@ class Stbu:
         face, img_content = self.get_face()
         filename = "{}-{}-{}-face.png".format(str(int(time.time())), sid, name)
         if qiniu.upload_file(filename, img_content):
-            user = UserModel(**{
+            return {
                 "sid": sid,
                 "name": name,
                 "id_num": id_num,
@@ -55,8 +54,7 @@ class Stbu:
                 "face_url": filename,
                 "email": email,
                 "phone": phone
-            })
-            return user
+            }
         return False
 
     def get_face(self):
@@ -95,7 +93,7 @@ class Stbu:
                 return self.get_info()
 
             if "验证码输入不正确" in response.text:
-                print('验证码输入不正确')
+                log.logger.debug('自动登陆教务系统，验证码输入不正确')
             elif "密码输入不正确" in response.text:
                 return 0
             else:
