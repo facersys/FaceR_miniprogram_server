@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from aip import AipOcr
 
+from aip import AipOcr
 from apps.libs.mongo import MongoTools
 from apps.libs.qiniu import MyQiNiu
 from apps.security import MONGO_DATABASE, QINIU_ACCESS_KEY, \

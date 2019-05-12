@@ -10,3 +10,4 @@ from apps.api import user
 from apps.api import tool
 from apps.api import notice
 from apps.api import login
+from apps.api import test

@@ -1,12 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE HTML>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <title>Title</title>
+	<title>FaceR</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="shortcut icon" href="https://facer.yingjoy.cn/static/logo.ico" />
+	<link rel="stylesheet" href={{url_for("static", filename="css/index.css")}}>
+	<noscript>
+		<style>
+			#main article {
+				opacity: 1;
+				margin: 4rem 0 0 0;
+			}
+		</style>
+	</noscript>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/skel/3.0.1/skel.min.js"></script>
+
 </head>
+
 <body>
-index template
+	<div id="wrapper">
+		<header id="header">
+			<div class="logo">
+				<img src="https://facer.yingjoy.cn/static/logo_white_bg.png" class="logo">
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>FaceR</h1>
+					<p>Signing system with face recognition.<br></p>
+				</div>
+			</div>
+			<nav>
+
+				<ul>
+					<li><a href="https://github.com/facersys/FaceR_GUI" target="_blank">FaceR Client</a></li>
+					<li><a href="javascript:void(0);" target="_blank">FaceR miniprogram</a></li>
+					<li><a href="https://github.com/facersys/MaoyanData" target="_blank">MaoyanData</a></li>
+				</ul>
+			</nav>
+		</header>
+		<footer id="footer">
+			<p class="copyright">蜀ICP备16029178号-1 © 2019</p>
+		</footer>
+	</div>
+	<div id="bg">
+	</div>
+	<script src={{url_for("static", filename="js/util.js")}}></script>
+	<script src={{url_for("static", filename="js/index.js")}}></script>
+	<script type="text/javascript">
+		document.oncontextmenu = function (t) {
+			window.event && (t = window.event);
+			try {
+				var e = t.srcElement;
+				return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1
+			} catch (n) {
+				return !1
+			}
+		}, document.onpaste = function (t) {
+			window.event && (t = window.event);
+			try {
+				var e = t.srcElement;
+				return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1
+			} catch (n) {
+				return !1
+			}
+		}, document.oncopy = function (t) {
+			window.event && (t = window.event);
+			try {
+				var e = t.srcElement;
+				return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1
+			} catch (n) {
+				return !1
+			}
+		}, document.oncut = function (t) {
+			window.event && (t = window.event);
+			try {
+				var e = t.srcElement;
+				return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1
+			} catch (n) {
+				return !1
+			}
+		}, document.onselectstart = function (t) {
+			window.event && (t = window.event);
+			try {
+				var e = t.srcElement;
+				return "INPUT" == e.tagName && "text" == e.type.toLowerCase() || "TEXTAREA" == e.tagName ? !0 : !1
+			} catch (n) {
+				return !1
+			}
+		};
+	</script>
 
 </body>
+
 </html>

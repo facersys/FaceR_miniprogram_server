@@ -7,24 +7,6 @@ from apps.settings import DEFAULT_AVATAR
 
 
 class UserModel:
-    """User Model
-    params:
-       sid: 学号
-       name: 姓名
-       gender: 性别
-       grade: 年级
-       major: 专业
-       cname: 班级id
-       face: 人脸编码
-       face_url: 对应人脸图像的url
-       created: 创建时间
-       openid: 微信openid
-       unionid: 微信unionid
-       is_bind_jw: 是否绑定教务系统
-       avatar: 头像
-       city: 城市
-       province: 省份
-    """
 
     def __init__(self, **kwargs):
         self.__info = kwargs

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CCIIP Demo</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.14.7/esm/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .content {
+            width: 50%;
+            padding: 25px;
+        }
+
+        .msg-box {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h2>FaceR CCIIP Demo</h2>
+    <form method="post" action="{{ url_for('api.cciip') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputName">
+                <span style="color: red;font-weight: 900">* </span>Name</label>
+            <input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputSID">
+                <span style="color: red;font-weight: 900">* </span>Student ID</label>
+            <input type="text" class="form-control" id="exampleInputSID" name="sid" placeholder="Enter student id">
+        </div>
+        <div class="form-group">
+            <label for="photo">
+                <span style="color: red;font-weight: 900">* </span>Photo</label>
+            <input type="file" class="form-control-file" name="photo" id="photo">
+        </div>
+        <button type="reset" class="btn btn-danger">Reset</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show msg-box" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+</body>
+</html>
