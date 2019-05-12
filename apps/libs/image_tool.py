@@ -20,22 +20,22 @@ def draw_face(image, face_landmarks_list):
     """画人脸"""
     for face_landmarks in face_landmarks_list:
         # 眉毛
-        cv2.polylines(image, get_polylines_data(face_landmarks['left_eyebrow']), False, (0, 255, 0), 5)
-        cv2.polylines(image, get_polylines_data(face_landmarks['right_eyebrow']), False, (0, 125, 0), 5)
+        cv2.polylines(image, get_polylines_data(face_landmarks['left_eyebrow']), False, (68, 54, 39, 128), 5)
+        cv2.polylines(image, get_polylines_data(face_landmarks['right_eyebrow']), False, (68, 54, 39, 128), 5)
 
         # 嘴唇
-        cv2.polylines(image, get_polylines_data(face_landmarks['top_lip']), False, (255, 0, 255), 3)
-        cv2.polylines(image, get_polylines_data(face_landmarks['bottom_lip']), False, (125, 0, 125), 3)
+        cv2.polylines(image, get_polylines_data(face_landmarks['top_lip']), False, (150, 0, 0, 64), 5)
+        cv2.polylines(image, get_polylines_data(face_landmarks['bottom_lip']), False, (150, 0, 0, 128), 5)
 
         # 眼睛
-        cv2.polylines(image, get_polylines_data(face_landmarks['left_eye']), True, (0, 0, 255), 3)
-        cv2.polylines(image, get_polylines_data(face_landmarks['right_eye']), True, (0, 0, 125), 3)
+        cv2.polylines(image, get_polylines_data(face_landmarks['left_eye']), True, (255, 255, 255, 30))
+        cv2.polylines(image, get_polylines_data(face_landmarks['right_eye']), True, (255, 255, 255, 30))
 
         # 下巴
-        cv2.polylines(image, get_polylines_data(face_landmarks['chin']), False, (255, 255, 255), 3)
+        cv2.polylines(image, get_polylines_data(face_landmarks['chin']), False, (255, 255, 255, 30))
 
         # 鼻子
-        cv2.polylines(image, get_polylines_data(face_landmarks['nose_bridge']), False, (255, 255, 0), 3)
-        cv2.polylines(image, get_polylines_data(face_landmarks['nose_tip']), False, (125, 125, 0), 3)
+        cv2.polylines(image, get_polylines_data(face_landmarks['nose_bridge']), False, (255, 255, 255, 30))
+        cv2.polylines(image, get_polylines_data(face_landmarks['nose_tip']), False, (255, 255, 255, 30))
 
     return image

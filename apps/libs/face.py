@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import cv2
 import os
 import numpy as np
@@ -24,12 +23,11 @@ class FaceTool:
         else:
             stream = self.__img
 
-        image = cv2.imdecode(np.frombuffer(stream, np.uint8), cv2.IMREAD_COLOR)
-        # with NamedTemporaryFile('w+b', delete=False) as f:
-        #     f.write(stream)
-        #     image = face_recognition.load_image_file(f.name)
-        #     tmp_filename = f.name
-        # os.remove(tmp_filename)
+        with NamedTemporaryFile('w+b', delete=False) as f:
+            f.write(stream)
+            image = face_recognition.load_image_file(f.name)
+            tmp_filename = f.name
+        os.remove(tmp_filename)
         return True if face_recognition.face_encodings(image) else False
 
     def encode(self):
@@ -40,18 +38,15 @@ class FaceTool:
             # stream = BytesIO(self.__img).read()
             stream = self.__img
 
-        image = cv2.imdecode(np.frombuffer(stream, np.uint8), cv2.IMREAD_COLOR)
-        face_codes = list(face_recognition.face_encodings(image))
+        with NamedTemporaryFile('w+b', delete=False) as f:
+            f.write(stream)
+            image = face_recognition.load_image_file(f.name)
+            # 一张图片可能会有多张人脸, 本应用只取第一张
+            face_code = list(face_recognition.face_encodings(image)[0])
+            tmp_filename = f.name
 
-        # with NamedTemporaryFile('w+b', delete=False) as f:
-        #     f.write(stream)
-        #     image = face_recognition.load_image_file(f.name)
-        # 一张图片可能会有多张人脸, 本应用只取第一张
-        # face_code = list(face_recognition.face_encodings(image)[0])
-        # face_codes = face_recognition.face_encodings(image)
-        # tmp_filename = f.name
-        # os.remove(tmp_filename)
-        return face_codes[0].tolist()
+        os.remove(tmp_filename)
+        return face_code
 
     def face_detection(self):
         if type(self.__img) == str:
@@ -101,7 +96,7 @@ class FaceTool:
                     result = self.find_face_owner(face_code)
                     if result.get('code') == 0:
                         # 只有数据库的学生才可以签到
-                        return_result.append(result.get('data'))
+                        return_result.append({'sid': result.get('data')})
                     else:
                         return_result.append({'sid': -1})
         except Exception as e:
