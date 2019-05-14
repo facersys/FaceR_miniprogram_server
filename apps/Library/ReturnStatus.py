@@ -14,6 +14,8 @@ JW_FAILURE = 85  # 绑定教务系统失败
 NOTICE_NOT_FOUND = 90  # 通知不存在
 NOTICEID_LOST = 91  # 未传入通知ID
 
+FACE_LOST = 100  # 照片上不存在人脸
+
 WECHAT_DECRYPT_LOST_PARAM = 401  # 微信解密缺少参数
 
 UNKNOWN_ERROR = 407  # 未知错误

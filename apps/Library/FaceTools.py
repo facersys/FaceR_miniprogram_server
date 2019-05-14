@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import cv2
-import os
 import numpy as np
 import requests
 import face_recognition
-from tempfile import NamedTemporaryFile
-
 from apps.Config import getConfig
 from apps.Library import mongo
 
@@ -25,11 +22,6 @@ class FaceTool:
             stream = self.__img
 
         image = cv2.imdecode(np.frombuffer(stream, np.uint8), cv2.IMREAD_COLOR)
-        # with NamedTemporaryFile('w+b', delete=False) as f:
-        #     f.write(stream)
-        #     image = face_recognition.load_image_file(f.name)
-        #     tmp_filename = f.name
-        # os.remove(tmp_filename)
         return True if face_recognition.face_encodings(image) else False
 
     def encode(self):
@@ -43,14 +35,8 @@ class FaceTool:
         image = cv2.imdecode(np.frombuffer(stream, np.uint8), cv2.IMREAD_COLOR)
         face_codes = list(face_recognition.face_encodings(image))
 
-        # with NamedTemporaryFile('w+b', delete=False) as f:
-        #     f.write(stream)
-        #     image = face_recognition.load_image_file(f.name)
-        # 一张图片可能会有多张人脸, 本应用只取第一张
-        # face_code = list(face_recognition.face_encodings(image)[0])
-        # face_codes = face_recognition.face_encodings(image)
-        # tmp_filename = f.name
-        # os.remove(tmp_filename)
+        if len(face_codes) <= 0:
+            return False
         return face_codes[0].tolist()
 
     def face_detection(self):
@@ -58,13 +44,8 @@ class FaceTool:
             stream = requests.get(self.__img).content
         else:
             stream = self.__img
-        with NamedTemporaryFile('w+b', delete=False) as f:
-            f.write(stream)
-            image = face_recognition.load_image_file(f.name)
-            # 一张图片可能会有多张人脸, 本应用只取第一张
-            face_landmarks_ = face_recognition.face_landmarks(image)
-            tmp_filename = f.name
-        os.remove(tmp_filename)
+        image = cv2.imdecode(np.frombuffer(stream, np.uint8), cv2.IMREAD_COLOR)
+        face_landmarks_ = face_recognition.face_landmarks(image)
         return face_landmarks_
 
     def get_face_arr(self):
@@ -111,7 +92,7 @@ class FaceTool:
         return return_result, image
 
     def find_face_owner(self, face_code):
-        results = list(mongo.find(getConfig('mongodb','user_collection'), {}))
+        results = list(mongo.find(getConfig('mongodb', 'user_collection'), {}))
         know_face_codes = [result['face'] for result in results]
         face_compare_result = face_recognition.compare_faces(know_face_codes, face_code)
         # 这里可能会出现非常相似的人脸(双胞胎) 不考虑

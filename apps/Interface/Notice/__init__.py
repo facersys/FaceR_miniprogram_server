@@ -58,7 +58,7 @@ def notice():
         nid = rbody.get('nid', None)
 
         if not nid:
-            log.logger.warning('删除通知，缺少通知ID')
+            log.logger.warning('删除通知错误，缺少通知ID')
             return _Return_Error_Post(code=NOTICEID_LOST, message='缺少通知id')
 
         need_delete_notice = NoticeModel.query.get(nid)
@@ -80,7 +80,7 @@ def notice():
         nid = rbody.get('nid', None)
 
         if not nid:
-            log.logger.warning('缺少通知id')
+            log.logger.warning('获取通知内容错误，缺少通知id')
             return _Return_Error_Post(code=NOTICEID_LOST, message='缺少通知id')
 
         query_notice = NoticeModel.query.get(nid)
@@ -105,7 +105,7 @@ def notice():
         nid = rbody.get('nid', None)
 
         if not nid:
-            log.logger.warning('缺少通知id')
+            log.logger.warning('更新通知错误，缺少通知id')
             return _Return_Error_Post(code=NOTICEID_LOST, message='缺少通知id')
 
         need_update_notice = NoticeModel.query.get(nid)

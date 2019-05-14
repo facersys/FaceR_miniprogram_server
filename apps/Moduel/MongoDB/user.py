@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from datetime import datetime
 
 
 class UserModel:
@@ -22,5 +23,6 @@ class UserModel:
     def get(self):
         return {
             "uid": self._uid,
-            "face": self._face
+            "face": self._face,
+            "update_time": datetime.now()
         }

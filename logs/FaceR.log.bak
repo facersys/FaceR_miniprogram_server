@@ -1,0 +1,75 @@
+2019-05-12 13:02:22,522 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\server.py[line:23] - DEBUG: 请求测试服务器是否正常工作
+2019-05-12 16:06:49,182 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:18] - DEBUG: 请求测试服务器是否正常工作
+2019-05-12 16:23:19,618 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 16:23:24,224 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 16:23:26,694 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 16:23:27,060 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 16:23:27,626 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 16:23:28,242 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Login\Wechat\Login.py[line:37] - WARNING: 微信解密信息缺少参数
+2019-05-12 22:48:54,608 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\Notice.py[line:34] - WARNING: 发送通知失败，缺少参数
+2019-05-12 23:10:16,928 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:34] - WARNING: 发送通知失败，缺少参数
+2019-05-12 23:27:22,879 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:57] - WARNING: 新增用户成功mKCyn8iMzAMyRzi5KiZ8q6
+2019-05-12 23:27:47,548 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:57] - WARNING: 新增用户成功UtRkkAgbYYktPqu44hYfYU
+2019-05-12 23:33:25,347 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:73] - INFO: 删除用户成功UtRkkAgbYYktPqu44hYf
+2019-05-12 23:35:47,634 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:63] - INFO: 新增用户成功DkYGEQEbTsJyfTWCdL5UNM
+2019-05-12 23:39:16,945 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:41] - INFO: 用户已存在
+2019-05-12 23:39:30,989 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:41] - INFO: 用户已存在
+2019-05-12 23:39:49,001 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:67] - INFO: 新增用户成功fETaTXMC2c3QCdgpJz8KFZ
+2019-05-12 23:42:13,071 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:81] - WARNING: 用户不存在
+2019-05-12 23:50:16,000 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:50:23,830 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:50:33,390 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:50:39,789 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:51:05,445 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:51:17,218 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:51:25,581 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:118] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:54:40,818 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:132] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:54:50,639 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:132] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:55:00,779 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:132] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:55:08,530 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:132] - INFO: 更新用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-12 23:59:50,833 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:149] - INFO: 查询用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:00:27,998 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:149] - INFO: 查询用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:00:45,913 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:146] - WARNING: 用户不存在
+2019-05-13 00:00:49,262 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:149] - INFO: 查询用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:16:29,560 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:48] - INFO: 通知发送成功0
+2019-05-13 00:18:09,822 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:167] - INFO: 查询用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:18:44,959 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:53] - INFO: 通知发送成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:18:49,502 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:167] - INFO: 查询用户成功fETaTXMC2c3QCdgpJz8K
+2019-05-13 00:24:36,623 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:63] - WARNING: 缺少通知id
+2019-05-13 00:26:16,452 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:79] - INFO: 查询通知成功: 1
+2019-05-13 00:32:21,400 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:123] - WARNING: 通知不存在
+2019-05-13 00:33:03,213 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:129] - INFO: 删除通知成功: 2
+2019-05-13 00:40:25,361 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:67] - INFO: 新增用户成功XpDm3ThSTCL4J39i9Ep7vP
+2019-05-13 00:40:38,656 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:52] - INFO: 通知发送成功0
+2019-05-13 00:40:40,446 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:52] - INFO: 通知发送成功0
+2019-05-13 00:40:47,771 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:149] - WARNING: 用户不存在
+2019-05-13 00:40:53,852 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:170] - INFO: 查询用户成功XpDm3ThSTCL4J39i9Ep7
+2019-05-13 00:42:03,176 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:135] - INFO: 更新用户成功XpDm3ThSTCL4J39i9Ep7
+2019-05-13 00:43:18,456 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:122] - INFO: 更新用户成功XpDm3ThSTCL4J39i9Ep7
+2019-05-13 00:44:18,455 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:104] - INFO: 更新通知成功: 2
+2019-05-13 00:45:12,174 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\Notice\__init__.py[line:104] - INFO: 更新通知成功: 2
+2019-05-13 00:56:41,547 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:55] - WARNING: 绑定教务系统账户或密码错误
+2019-05-13 01:21:37,710 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:103] - WARNING: 用户不存在
+2019-05-13 01:21:45,552 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\__init__.py[line:107] - INFO: 查询用户成功XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:32:07,805 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:74] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:34:37,494 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:74] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:40:20,574 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:40:24,126 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:73] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:41:22,863 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:41:26,575 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:71] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:43:26,467 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:43:29,628 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:72] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:44:17,541 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:72] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:45:31,488 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:71] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:47:06,404 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:47:06,993 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:47:37,314 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:51:03,206 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:51:06,597 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:70] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:55:42,647 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:55:43,174 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:55:46,468 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:72] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7
+2019-05-13 01:56:39,313 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:56:39,820 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:56:40,314 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Library\Stbu.py[line:96] - DEBUG: 自动登陆教务系统，验证码输入不正确
+2019-05-13 01:56:43,723 - C:\Users\Ying Joy\Documents\Code\PyCharm\FaceR_miniprogram_server\apps\Interface\User\Stbu.py[line:63] - INFO: 绑定教务成功: XpDm3ThSTCL4J39i9Ep7

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import time
-from flask import render_template, request, flash
-from apps.api import api
-from apps.libs.face import FaceTool
-from apps.models.user import UserModel
+from flask import request, render_template, flash
+from apps.Library.FaceTools import FaceTool
+from apps.Moduel.MySQL.user import UserModel
+from apps.Pages import pages
 
 
-@api.route('/cciip', methods=['GET', 'POST'])
+@pages.route('/cciip', methods=['GET', 'POST'])
 def cciip():
     if request.method == 'GET':
         return render_template('cciip.html')

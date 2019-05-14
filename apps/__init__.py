@@ -3,6 +3,7 @@
 from flask import Flask
 from flask_cors import CORS
 from apps.Interface import api
+from apps.Pages import pages
 from apps.Library import db
 
 __author__ = "YingJoy"
@@ -16,6 +17,7 @@ def create_app():
 
     # 注册蓝图
     app.register_blueprint(api)
+    app.register_blueprint(pages)
 
     # 初始化应用
     CORS(app, resources=r'/*')

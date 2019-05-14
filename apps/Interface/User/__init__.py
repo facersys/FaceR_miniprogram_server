@@ -93,7 +93,7 @@ def user():
         uid = rbody.get('uid', None)
 
         if not uid:
-            log.logger.warning('更新用户信息，缺少用户ID')
+            log.logger.warning('获取用户信息，缺少用户ID')
             return _Return_Error_Post(code=USERID_LOST, message='缺少用户id')
 
         query_user = UserModel.query.get(uid)
