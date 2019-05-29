@@ -46,11 +46,11 @@ def stbu():
         need_update_user.grade = stbu_user.get('grade')
         need_update_user.major = stbu_user.get('major')
         need_update_user.grade = stbu_user.get('grade')
-        need_update_user.class_name = stbu_user.get('cname')
+        need_update_user.class_name = stbu_user.get('class_name')
         need_update_user.college = stbu_user.get('college')
         need_update_user.email = stbu_user.get('email')
         need_update_user.phone = stbu_user.get('phone')
-        need_update_user.face_url = stbu_user.get('face_url')
+        need_update_user.face_url = getConfig('qiniu', 'domain') + "/" + stbu_user.get('face_url')
         need_update_user.is_bind_jw = True
 
         # 更新用户信息 -> MongoDB
