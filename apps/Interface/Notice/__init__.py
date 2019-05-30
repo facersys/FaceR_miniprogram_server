@@ -6,7 +6,8 @@ from apps.Interface import api
 from apps.Library import db
 from apps.Library import log
 from apps.Library.ReturnResponse import _Return_Error_Post, _Return_Post
-from apps.Library.ReturnStatus import NOTICE_LOST_PARAM, NOTICE_NOT_FOUND, NOTICEID_LOST
+from apps.Library.ReturnStatus import NOTICE_LOST_PARAM, NOTICE_NOT_FOUND, NOTICEID_LOST, USERID_LOST
+from apps.Library.StringTools import datetime2str
 from apps.Moduel.MySQL.user import UserModel
 from apps.Moduel.MySQL.notice import NoticeModel
 
@@ -20,7 +21,7 @@ def notice():
         "content": 内容
     }
     """
-    rbody = request.json or {}
+    rbody = request.json or {} if request.method != 'GET' else request.args
 
     if request.method == "POST":
         # 发送通知
@@ -44,7 +45,9 @@ def notice():
                 db.session.flush()
         else:
             # 发给个人
-            user = UserModel.query.get(target)
+            print(target)
+            user = UserModel.query.filter(UserModel.id == target).first()
+            print(user)
             new_notice = NoticeModel(title=title, content=content, user_id=user.id)
             db.session.add(new_notice)
             db.session.flush()
@@ -85,6 +88,11 @@ def notice():
 
         query_notice = NoticeModel.query.get(nid)
 
+        # 设置为已读
+        query_notice.is_read = True
+        db.session.add(query_notice)
+        db.session.commit()
+
         # 判断用户是否存在
         if not query_notice:
             log.logger.warning('通知不存在')
@@ -94,7 +102,8 @@ def notice():
             "nid": query_notice.id,
             "title": query_notice.title,
             "content": query_notice.content,
-            "is_read": query_notice.is_read
+            "is_read": query_notice.is_read,
+            'create_time': datetime2str(query_notice.create_time)
         }
         log.logger.info("查询通知成功: %s" % nid)
         return _Return_Post(data=data, message='查询通知成功')
@@ -127,3 +136,21 @@ def notice():
         return _Return_Post(data=nid, message='更新通知成功')
 
 
+@api.route('/getNoticesByUID')
+def get_notices_by_uid():
+    uid = request.args.get('uid', None)
+    if not uid:
+        log.logger.warning('查找通知错误，缺少通知id')
+        return _Return_Error_Post(code=USERID_LOST, message='缺少用戶id')
+    notices = NoticeModel.query.filter(NoticeModel.user_id == uid) \
+        .order_by(NoticeModel.create_time.desc()).all()
+    data = []
+    for n in notices:
+        data.append({
+            'nid': n.id,
+            'title': n.title,
+            'note': n.content[:16] + '...',
+            'is_read': n.is_read,
+            'create_time': datetime2str(n.create_time)
+        })
+    return _Return_Post(data=data, message='获取通知成功')
